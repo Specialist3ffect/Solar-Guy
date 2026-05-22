@@ -1,4 +1,5 @@
 import ContactForm from "./ContactForm";
+import CalendlyEmbed from "./CalendlyEmbed";
 
 export default function BookingSection() {
   return (
@@ -47,52 +48,7 @@ export default function BookingSection() {
               </p>
             </div>
 
-            {/*
-             * ─── CALENDLY INTEGRATION ───────────────────────────────────────────
-             * To embed Calendly inline, replace everything below (the placeholder
-             * div + button) with:
-             *
-             *   1. Install the package:
-             *      npm install react-calendly
-             *
-             *   2. Import and render in a "use client" component:
-             *      import { InlineWidget } from "react-calendly";
-             *
-             *      <InlineWidget
-             *        url="https://calendly.com/YOUR_USERNAME/free-solar-consult"
-             *        styles={{ height: "650px" }}
-             *      />
-             *
-             * Or use the plain script embed from Calendly's embed builder:
-             *   <div
-             *     className="calendly-inline-widget"
-             *     data-url="https://calendly.com/YOUR_USERNAME/free-solar-consult"
-             *     style={{ minWidth: "320px", height: "650px" }}
-             *   />
-             *   <Script src="https://assets.calendly.com/assets/external/widget.js" />
-             *
-             * ────────────────────────────────────────────────────────────────────
-             */}
-            <div className="m-6 rounded-xl border-2 border-dashed border-gray-200 bg-gray-50 flex flex-col items-center justify-center gap-4 py-16 px-6 text-center">
-              <span className="text-5xl">📆</span>
-              <div>
-                <p className="font-semibold text-gray-700">
-                  Calendly Embed Goes Here
-                </p>
-                <p className="text-sm text-gray-400 mt-1">
-                  Replace this box with your Calendly inline widget
-                </p>
-              </div>
-              <a
-                // TODO: Replace with your actual Calendly URL
-                href="https://calendly.com/YOUR_USERNAME"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold text-sm px-6 py-3 rounded-full transition-colors"
-              >
-                Open Scheduling Page →
-              </a>
-            </div>
+            <CalendlyEmbed />
           </div>
 
           {/* Right: Contact form */}
